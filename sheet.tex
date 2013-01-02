@@ -2,8 +2,91 @@
 
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
+\usepackage{multicol,calc,supertabmod,comment}
 
+\newcounter{cog}\setcounter{cog}{0}
+\newcounter{coo}\setcounter{coo}{0}
+\newcounter{int}\setcounter{int}{0}
+\newcounter{ref}\setcounter{ref}{0}
+\newcounter{sav}\setcounter{sav}{0}
+\newcounter{som}\setcounter{som}{0}
+\newcounter{wil}\setcounter{wil}{0}
+
+\newenvironment{skillset}[1]{
+\tablehead{#1 & & \\}\begin{supertabular}{lll}
+}{\end{supertabular}}
+
+\newenvironment{skilltab}[1]{%
+\begin{multicols}{2}
+    \begin{skillset}{#1}
+}{\end{skillset}\end{multicols}}
+
+\newcommand{\skill}[3]{#1 & \textsc{#2} & \addtocounter{#2}{#3} \arabic{#2} \addtocounter{#2}{-#3} \\} %1 is name of skill, 2 is relevant aptitude, 3 is points
 
 \begin{document}
+    \begin{multicols}{2}
+        \begin{tabular}{ll}
+            CHARACTER & \\
+            BACKGROUND & \\
+            Faction & \\
+            Morph & \\
+            Gender Identity & \\
+            Actual Age & \\
+        \end{tabular}
+        \columnbreak
+        \begin{flushright}
+        \begin{tabular}{lccccccc}
+            & COG & COO & INT & REF & SAV & SOM & WIL \\
+            Base \\
+            Morph Bonus \\
+        \end{tabular}
+    \end{flushright}
+    \end{multicols}
+    \begin{multicols*}{2}
+   %     \let\mcnewpage=\newpage
+    %    \makeatletter
+     %   \renewcommand\newpage{%
+      %          \if@firstcolumn
+      %                  \hrule width\linewidth height0pt
+      %                  \columnbreak
+      %          \else
+      %                  \mcnewpage
+      %          \fi
+      %  }
+      %  \makeatother
+    %\begin{skillset}{Something}
     
+    \begin{skilltab}{Something}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}
+    \skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}\skill{test}{cog}{1}
+\end{skilltab}
 \end{document}
